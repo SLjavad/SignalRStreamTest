@@ -48,9 +48,9 @@
             // 
             this.button2.Location = new System.Drawing.Point(138, 116);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
+            this.button2.Size = new System.Drawing.Size(158, 29);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Send1";
+            this.button2.Text = "Send Stream";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -67,9 +67,9 @@
             // 
             this.button3.Location = new System.Drawing.Point(138, 196);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
+            this.button3.Size = new System.Drawing.Size(158, 29);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Send2";
+            this.button3.Text = "Send Request";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
