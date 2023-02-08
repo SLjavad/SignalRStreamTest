@@ -32,24 +32,11 @@ namespace SignalRClientTestUi
             connection.On<string, bool>("stream_handshake", async (input) =>
             {
                 return true;
-                //string[] splittedData = input.Split(':');
-                //if (!clientList.Any(x => x.ClientId == splittedData[0]))
-                //{
-                //    Console.WriteLine($"client with id {splittedData[0]} trying to stream handshake but it doesn't exists in client list");
-                //    return false;
-                //}
-                //var res = await gRPCClient.InitialStream(input); // client-id:format
-                //return res;
-                //return true;
             });
         }
 
         public async Task StreamFromAiToServer()
         {
-            //await foreach (var item in data)
-            //{
-            //    Console.WriteLine(item.ClientId);
-            //}
             var channel = Channel.CreateUnbounded<int>();
             await connection.SendAsync("ReplayFromAdminToServer", channel.Reader);
             for (int i = 0; i < 1000; i++)
@@ -86,7 +73,7 @@ namespace SignalRClientTestUi
             var res = await connection.InvokeAsync<bool>("StreamHandshake", "stream_handshake");
             if (res)
             {
-                await connection.SendAsync("ImageMessage", "salam");
+                await connection.SendAsync("ImageMessage", "Hello");
             }
         }
     }
